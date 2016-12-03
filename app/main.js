@@ -1,4 +1,4 @@
-var app = angular.module('justDressApp', ['ngRoute', 'ngMaterial']);
+var app = angular.module('justDressApp', ['ngRoute', 'ngMaterial', 'ngSanitize', 'ngMdIcons', 'mdDataTable']);
 
 app.config(["$routeProvider", '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider.
@@ -7,8 +7,12 @@ app.config(["$routeProvider", '$locationProvider', function($routeProvider, $loc
         controller: 'controllerHome'
     }).
     when('/addprodotto', {
-            templateUrl: 'addProdotto.html',
-            controller: 'addProdotto'
+        templateUrl: 'addProdotto.html',
+        controller: 'addProdotto'
+    }).
+    when('/productList', {
+            templateUrl: 'productList.html',
+            controller: 'productList'
         })
         .otherwise('/')
 

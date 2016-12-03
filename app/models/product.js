@@ -6,8 +6,10 @@ var ProductSchema = new Schema({
     prezzo: Number,
     descrizione: String,
     quantità: Number,
-    foto: Buffer,
-    categoryId: Number,
+    // foto: Buffer,
+    foto: String,
+
+    categoria: Number,
     sesso: String,
 
 });
