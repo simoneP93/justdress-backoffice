@@ -42,10 +42,13 @@
     <link href="node_modules/md-data-table/dist/md-data-table-style.css" rel="stylesheet" />
 
     <link href="node_modules/angular-material/angular-material.min.css" rel="stylesheet" />
+    <!--TOASTR-->
+    <link href="node_modules/toastr/build/toastr.min.css" rel="stylesheet" />
+    <script src="node_modules/toastr/build/toastr.min.js"></script>
 
     <script src="app/main.js"></script>
     <script src="app/controllers/controllerHome.js"></script>
-    <script src="app/services/addFormService.js"></script>
+    <script src="app/services/productService.js"></script>
     <script src="app/controllers/addProdotto.ctrl.js"></script>
     <script src="app/controllers/productList.ctrl.js"></script>
 
@@ -58,7 +61,7 @@
             <div class="col-md-3 left_col">
                 <div class="left_col scroll-view">
                     <div class="navbar nav_title" style="border: 0;">
-                        <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentellela Alela!</span></a>
+                        <a href="index.html" class="site_title"></i> <span>JustDress</span></a>
                     </div>
 
                     <div class="clearfix"></div>
@@ -89,14 +92,10 @@
                                         <li><a href="index3.html">Dashboard3</a></li>
                                     </ul>
                                 </li>
-                                <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
+                                <li><a><i class="fa fa-edit"></i> Prodotti <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li><a href="form.html">General Form</a></li>
-                                        <li><a href="form_advanced.html">Advanced Components</a></li>
-                                        <li><a href="form_validation.html">Form Validation</a></li>
-                                        <li><a href="form_wizards.html">Form Wizard</a></li>
-                                        <li><a href="form_upload.html">Form Upload</a></li>
-                                        <li><a href="form_buttons.html">Form Buttons</a></li>
+                                        <li><a href="form.html">Aggiungi</a></li>
+                                        <li><a href="form_advanced.html">Lista</a></li>
                                     </ul>
                                 </li>
                                 <li><a><i class="fa fa-desktop"></i> UI Elements <span class="fa fa-chevron-down"></span></a>
@@ -182,7 +181,7 @@
                     <!-- /sidebar menu -->
 
                     <!-- /menu footer buttons -->
-                    <div class="sidebar-footer hidden-small">
+                    <!--<div class="sidebar-footer hidden-small">
                         <a data-toggle="tooltip" data-placement="top" title="Settings">
                             <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
                         </a>
@@ -191,11 +190,11 @@
                         </a>
                         <a data-toggle="tooltip" data-placement="top" title="Lock">
                             <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-                        </a>
+                         </a>
                         <a data-toggle="tooltip" data-placement="top" title="Logout">
                             <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
                         </a>
-                    </div>
+                    </div>-->
                     <!-- /menu footer buttons -->
                 </div>
             </div>
@@ -205,7 +204,7 @@
                 <div class="nav_menu">
                     <nav class="" role="navigation">
                         <div class="nav toggle">
-                            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                            <a id="menu_toggle" style="color: #2A3F54;"><i class="fa fa-bars"></i></a>
                         </div>
 
                         <ul class="nav navbar-nav navbar-right">

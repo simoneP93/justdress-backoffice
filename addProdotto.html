@@ -1,6 +1,6 @@
-<div layout="column" ng-cloak class="md-inline-form" style="float:right">
+<div layout="column" ng-cloak class="md-inline-form" style="display:block">
 
-    <md-content layout-padding style="margin-right:450px">
+    <md-content layout-padding style="left: 315px;float: left;width: 70%;margin-right: 0;">
         <div>
             <form name="userForm">
 
@@ -18,11 +18,11 @@
 
                 <div layout-gt-sm="row">
                     <md-input-container class="md-block" flex-gt-sm>
-                        <label>Nome</label>
+                        <label style="color: #2A3F54;font-size: 1.1em;">Nome</label>
                         <input ng-model="user.nome">
                     </md-input-container>
                     <md-input-container class="md-block" flex-gt-sm>
-                        <label>Prezzo</label>
+                        <label style="color: #2A3F54;font-size: 1.1em;">Prezzo</label>
                         <input name="prezzo" ng-model="user.prezzo" type="number" required>
 
                         <!--<div ng-messages="userForm.postalCode.$error" role="alert" multiple>
@@ -41,7 +41,7 @@
                 </div>
 
                 <md-input-container class="md-block" flex-gt-sm>
-                    <label>Quantità</label>
+                    <label style="color: #2A3F54;font-size: 1.4em;">Quantità</label>
                     <input name="quantita" ng-model="user.quantita" placeholder="0" required type="number" />
 
                 </md-input-container>
@@ -56,12 +56,12 @@
 
                 <div layout-gt-sm="row">
                     <md-input-container class="md-block" flex-gt-sm>
-                        <label>Sesso</label>
+                        <label style="color: #2A3F54;font-size: 1.1em;">Sesso</label>
                         <input ng-model="user.sesso">
                     </md-input-container>
 
                     <md-input-container class="md-block" flex-gt-sm>
-                        <label>Categoria</label>
+                        <label style="color: #2A3F54;font-size: 1.4em;" style="color: #2A3F54;font-size: 1.2em;">Categoria</label>
                         <md-select ng-model="user.categoria">
                             <md-option ng-repeat="categ in categorie" value="{{categ.id}}">
                                 {{categ.nome}}
@@ -73,12 +73,14 @@
                 </div>
 
                 <md-input-container class="md-block">
-                    <label>Descrizione</label>
+                    <label style="color: #2A3F54;font-size: 1.1em;">Descrizione</label>
                     <textarea ng-model="user.descrizione" md-maxlength="150" rows="5" md-select-on-focus></textarea>
                 </md-input-container>
 
-                <md-button ng-click="addProduct(user)">
+                <md-button ng-click="addProduct(user)" style="background: #2A3F54;">
+                    <span style="color: white;font-size: 1.1em;">
                     add
+                    </span>
                 </md-button>
             </form>
         </div>

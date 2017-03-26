@@ -1,5 +1,5 @@
-app.controller('addProdotto', ['$scope', '$http', 'addFormSvc',
-    function($scope, $http, addFormSvc) {
+app.controller('addProdotto', ['$scope', '$http', 'productSvc',
+    function($scope, $http, productSvc) {
 
         init();
 
@@ -21,8 +21,9 @@ app.controller('addProdotto', ['$scope', '$http', 'addFormSvc',
         }
         $scope.addProduct = function(user) {
             console.log(user);
-            addFormSvc.addProduct(user, false, function(res) {
+            productSvc.addProduct(user, false, function(res) {
                 console.log(res);
+                toastr.success('Prodotto aggiunto correttamente!')
             });
         }
 
