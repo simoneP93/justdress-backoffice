@@ -1,4 +1,4 @@
-var app = angular.module('justDressApp', ['ngRoute', 'ngMaterial', 'ngSanitize', 'ngMdIcons', 'mdDataTable']);
+var app = angular.module('justDressApp', ['ngRoute', 'ngMaterial', 'ngSanitize', 'ngMdIcons', 'mdDataTable', 'angularSpinners']);
 
 app.config(["$routeProvider", '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider.

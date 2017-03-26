@@ -9,6 +9,7 @@ app.use(body_parser.urlencoded({ extended: true }));
 app.use(body_parser.json({ extended: true, limit: '50mb' }));
 
 var mongoose = require('mongoose');
+// var spinner = require('angular-spinners');
 mongoose.connect('mongodb://localhost:27017/JustDress'); // connect to our database
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
