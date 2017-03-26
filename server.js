@@ -32,7 +32,7 @@ router.use(function(req, res, next) {
     next(); // make sure we go to the next routes and don't stop here
 });
 
-
+// require('./app/routes')(app, {});
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
 router.get('/', function(req, res) {
     res.json({ message: 'hooray! welcome to our api!' });
@@ -107,6 +107,8 @@ router.route('/product/:product_id')
     }, function(err, product) {
         if (err)
             res.send(err);
+
+        console.log(product);
 
         res.json({ message: 'Successfully deleted' });
     });

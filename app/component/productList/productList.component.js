@@ -26,9 +26,15 @@ function ProductListController($timeout) {
 
 
     // init();
-    // ctrl.delete = function() {
-    //     ctrl.onDelete({ hero: ctrl.hero });
-    // };
+    ctrl.delete = function(prod) {
+        console.log(prod);
+        ctrl.onDelete({ item: prod });
+    };
+
+    ctrl.edit = function(prod) {
+        console.log(prod);
+        ctrl.onEdit({ item: prod });
+    };
 
     // ctrl.update = function(prop, value) {
     //     ctrl.onUpdate({ hero: ctrl.hero, prop: prop, value: value });
@@ -43,9 +49,11 @@ app.component('productList', {
     controller: ProductListController,
     bindings: {
         listItems: '=',
-        propertyItem: '='
-            // onDelete: '&',
-            // onUpdate: '&'
+        propertyItem: '=',
+        onDelete: '&',
+        onEdit: '&',
+
+        // onUpdate: '&'
     }
 
 });

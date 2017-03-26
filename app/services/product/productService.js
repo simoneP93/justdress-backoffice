@@ -34,6 +34,23 @@ app.factory('productSvc', ['$http',
                 });
         }
 
+        fc.deleteProduct = function(product, spinner, callback) {
+            console.log(product);
+            if (spinner) {
+                //to do: add spinner
+            }
+
+            return $http.delete('/api/product/' + product._id).success(function(data) {
+                    console.log(data);
+                    callback(data);
+                })
+                .error(function(data) {
+                    console.log('Error: ' + data);
+                    callback(data);
+                });
+        }
+
+
         return fc;
 
     }

@@ -1,0 +1,47 @@
+<md-dialog aria-label="Mango (Fruit)">
+    <md-content class="md-padding">
+        <form name="clientForm">
+            <div layout layout-sm="column">
+                <md-input-container flex>
+                    <label>SKU</label>
+                    <input ng-model="model.product._id">
+                </md-input-container>
+                <md-input-container flex>
+                    <label>Nome</label>
+                    <input ng-model="model.product.nome">
+                </md-input-container>
+            </div>
+            <md-input-container flex>
+                <label>Colore</label>
+                <input ng-model="model.product.colore">
+            </md-input-container>
+            <div layout layout-sm="column">
+                <md-input-container flex>
+                    <label>Taglia</label>
+                    <input ng-model="model.product.taglia">
+                </md-input-container>
+                <md-input-container flex>
+                    <label>Prezzo</label>
+                    <input ng-model="model.product.prezzo">
+                </md-input-container>
+                <md-input-container flex>
+                    <label>Quantità</label>
+                    <input ng-model="model.product.qnt">
+                </md-input-container>
+            </div>
+            <!--<md-input-container flex="100">
+                <md-select name="myselect" id="myselect" placeholder="Status" ng-model="product.status" ng-required="true">
+                    <md-option ng-repeat="o in status" ng-value="o">{{o}}</md-option>
+                </md-select>
+                <div ng-messages="myForm.status.$error" ng-show="myForm.status.$touched && myForm.status.$invalid">
+                    <div ng-message="required">Lo Status è obbligatorio</div>
+                </div>
+            </md-input-container>-->
+        </form>
+    </md-content>
+    <div class="md-actions" layout="row">
+        <span flex></span>
+        <md-button ng-click="answer()"> Reset </md-button>
+        <md-button ng-click="submit()" class="md-primary"> Aggiungi </md-button>
+    </div>
+</md-dialog>

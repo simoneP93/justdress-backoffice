@@ -1,3 +1,7 @@
 .customSpinner {
     width: 20%;
 }
+
+.customSpinner>img {
+    width: 120px;
+}
