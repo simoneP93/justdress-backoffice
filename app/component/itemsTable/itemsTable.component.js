@@ -1,4 +1,4 @@
-function ProductListController($timeout) {
+function ItemsTableController($timeout) {
 
     var ctrl = this;
 
@@ -16,13 +16,6 @@ function ProductListController($timeout) {
             // }, 1000);
     }
 
-
-
-
-    // for (var property in object) {
-    //     if (object.hasOwnProperty(property)) {
-    //         // do stuff
-    //     }
 
 
     // init();
@@ -44,12 +37,13 @@ function ProductListController($timeout) {
 
 
 
-app.component('productList', {
-    templateUrl: 'app/component/productList/productList.html',
-    controller: ProductListController,
+app.component('itemsTable', {
+    templateUrl: 'app/component/itemsTable/itemsTable.html',
+    controller: ItemsTableController,
     bindings: {
         listItems: '=',
         propertyItem: '=',
+        title: '@',
         onDelete: '&',
         onEdit: '&',
 

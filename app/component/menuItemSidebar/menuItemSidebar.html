@@ -1,0 +1,9 @@
+<div class="nav side-menu">
+    <li ng-click="$ctrl.open($ctrl.itemId)" id="menuItems{{$ctrl.itemId}}"><a><i class="fa fa-edit"></i> {{$ctrl.title}} <span class="fa fa-chevron-down"></span></a>
+        <!--<i class="fa fa-user"></i>-->
+        <ul class="nav child_menu">
+            <li><a ng-href="#add{{$ctrl.title}}">Aggiungi</a></li>
+            <li><a ng-href="#{{$ctrl.title}}List">Lista</a></li>
+        </ul>
+    </li>
+</div>
